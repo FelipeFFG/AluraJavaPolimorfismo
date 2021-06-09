@@ -1,18 +1,16 @@
 package ConteudosAulas123;
 
-public class Funcionario {
+//abstract esta relacionado com herança, sendo algo abstrado nao sendo possivel criar um objeto do tipo funcionario.
+public abstract class Funcionario  {
 
     private String nome;
     private String cpf;
     private double salario; //publico para os filhos.
 
 
+    //metodo sem corpo, nao há implementação
+    public abstract double getBonificacao();
 
-
-
-    public double getBonificacao(){
-        return this.salario * 0.05;
-    }
 
     public String getNome() {
         return nome;

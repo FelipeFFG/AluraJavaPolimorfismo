@@ -1,19 +1,18 @@
 package ConteudosAula4;
 
-public class Conta {
+public abstract class Conta {
 
-     private double saldo;
+     protected double saldo;
      private int agencia;
      private int numero;
      private Cliente titular;
      private static int total;  //static significa que é um atributo da classe e nao do objeto.
 
-     public void depositar(double valor){    //depositar valor na conta
-          saldo += valor;
-     }
+     public abstract void depositar(double valor);   //depositar valor na conta
 
 
-     public Conta(int agencia,int numero){//construtor
+
+     public  Conta(int agencia,int numero){//construtor
           Conta.total++;
           //System.out.println("O total de contas é " + Conta.total );
           this.agencia = agencia;

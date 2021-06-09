@@ -21,7 +21,7 @@ public class Gerente extends Funcionario {
 
     public double getBonificacao(){
         System.out.println("chamando o metodo de bonificação do gerente");
-        return  super.getBonificacao() + super.getSalario();   //super sinaliza que o atributo vem da classe super,base class, ou seja nao esta sendo definida nesta calsse.
+        return super.getSalario();                       //super sinaliza que o atributo vem da classe super,base class, ou seja nao esta sendo definida nesta calsse.
                                                          //alem de ser utlizado para trazer metodos da classe super,reaproveitando os conteudos da classe extendida.
     }
 }

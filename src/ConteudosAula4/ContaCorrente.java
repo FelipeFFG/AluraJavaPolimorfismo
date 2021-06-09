@@ -17,5 +17,8 @@ public class ContaCorrente extends Conta{  //herda os atributos e metodos porem 
         return super.sacar(valorASacar);
     }
 
-
+    @Override
+    public void depositar(double valor) {
+        super.saldo += valor;
+    }
 }
