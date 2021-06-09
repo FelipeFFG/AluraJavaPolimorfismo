@@ -1,3 +1,5 @@
+package ConteudosAulas123;
+
 public class TesteReferencias {
 
     public static void main(String[] args) {
@@ -13,9 +15,11 @@ public class TesteReferencias {
         EditorVideo ev = new EditorVideo();
         ev.setSalario(2500);
 
+        Designer d = new Designer();
+
         ControleBonificacao controle = new ControleBonificacao();
 
-
+        controle.registra(d);
         controle.registra(g1);
         controle.registra(f);
         controle.registra(ev);

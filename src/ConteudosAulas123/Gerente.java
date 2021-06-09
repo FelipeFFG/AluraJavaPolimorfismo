@@ -1,5 +1,6 @@
+package ConteudosAulas123;
 
-//Gerente é um funcionario,Gerente herda da class Funcionario
+//ConteudosAulas123.Gerente é um funcionario,ConteudosAulas123.Gerente herda da class ConteudosAulas123.Funcionario
 public class Gerente extends Funcionario {
 
     private int senha;

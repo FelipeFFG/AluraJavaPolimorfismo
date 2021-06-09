@@ -1,3 +1,5 @@
+package ConteudosAulas123;
+
 public class Funcionario {
 
     private String nome;
