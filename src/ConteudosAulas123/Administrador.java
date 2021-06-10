@@ -3,19 +3,20 @@ package ConteudosAulas123;
 public class Administrador extends Funcionario implements Autenticavel {
 
     private int senha;
+    private AutenticacaoUtil autenticador;
+
+    public Administrador(){
+        autenticador  = new AutenticacaoUtil();
+    }
 
     @Override
-    public void setSenha(int senha) {
-        this.senha = senha;
+    public void setSenha(int senha) {       //chama o metodo do implementes Auteticavel
+        this.autenticador.setSenha(senha);  // delega o trabalho para classe AutenticacaoUtil
     }
 
     @Override
     public boolean autentica(int senha) {
-        if (this.senha ==senha){
-            return true;
-        }else{
-            return false;
-        }
+        return this.autenticador.autentica(senha);
     }
 
     @Override

@@ -1,22 +1,23 @@
 package ConteudosAulas123;
 
-//ConteudosAulas123.Gerente é um funcionario,ConteudosAulas123.Gerente herda da class ConteudosAulas123.Funcionario
+//Gerente eh um funcionario, Gerente herda da classe funcioanario,assina contrato autenticavel, eh um autenticavel.
 public class Gerente extends Funcionario implements Autenticavel{
 
     private int senha;
+    private AutenticacaoUtil autenticador;
+
+    public Gerente(){
+        autenticador = new AutenticacaoUtil();
+    }
 
     @Override
-    public void setSenha(int senha) {
-        this.senha = senha;
+    public void setSenha(int senha) {       //chama o metodo do implementes Auteticavel
+        this.autenticador.setSenha(senha);  // delega o trabalho para classe AutenticacaoUtil
     }
 
     @Override
     public boolean autentica(int senha) {
-        if (this.senha ==senha){
-            return true;
-        }else{
-            return false;
-        }
+        return this.autenticador.autentica(senha);
     }
 
     public double getBonificacao(){
